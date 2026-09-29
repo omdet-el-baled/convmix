@@ -1,0 +1,11 @@
+# Asteroid model/runtime dependencies, separate from its legacy TorchMetrics pin.
+# The base project already supplies torch, Lightning, TorchMetrics, NumPy, SciPy,
+# and PyYAML. Keep the existing matched torch/torchaudio installation.
+asteroid-filterbanks>=0.4.0,<0.5
+soundfile>=0.10.2
+huggingface_hub>=0.0.2
+pandas>=1.5
+pb_bss_eval>=0.0.2
+torch_stoi>=0.1.2
+torch_optimizer>=0.0.1a12,<0.2.0
+julius>=0.2.7

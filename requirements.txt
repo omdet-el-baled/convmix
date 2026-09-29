@@ -1,0 +1,11 @@
+# Keep your already-working PyTorch/CUDA installation.
+# torch is intentionally NOT installed by this file.
+numpy>=1.24
+pytorch-lightning>=2.2,<3
+PyYAML>=6
+matplotlib>=3.7
+scipy>=1.10
+tensorboard>=2.14
+pytest>=7
+hydra-core>=1.3.2,<1.4
+omegaconf>=2.3,<2.4

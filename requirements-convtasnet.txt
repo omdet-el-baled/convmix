@@ -1,0 +1,5 @@
+# Optional model package ONLY. Asteroid 0.7.0 metadata pins torchmetrics<=0.11.4.
+# In the existing Lightning environment, keep its working torch/torchaudio/
+# torchmetrics installation. Install this file with --no-deps after installing
+# requirements-convtasnet-runtime.txt; see docs/CONVTASNET.md.
+asteroid==0.7.0
