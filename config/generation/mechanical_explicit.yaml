@@ -1,0 +1,39 @@
+_target_: src.data.components.DatasetGenerator
+_recursive_: false
+filters:
+  _target_: src.data.filters.generate_filter_bank
+sources:
+  _target_: src.data.components.SourceBank
+  _recursive_: false
+  sources:
+  - _target_: src.data.generate.generate_spur_gear_source
+    rpm_range:
+    - 200
+    - 400
+    teeth_range:
+    - 15
+    - 24
+    harmonic_range:
+    - 4
+    - 7
+    sideband_range:
+    - 2
+    - 5
+  - _target_: src.data.generate.generate_spur_gear_source
+    rpm_range:
+    - 500
+    - 1000
+    teeth_range:
+    - 25
+    - 34
+    harmonic_range:
+    - 2
+    - 4
+    sideband_range:
+    - 3
+    - 6
+  fallback:
+    _target_: src.data.generate.generate_epicyclic_source
+measurement_noise:
+  _target_: src.data.generate.add_noise_at_snr
+  _partial_: true

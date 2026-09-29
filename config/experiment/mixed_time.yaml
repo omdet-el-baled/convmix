@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+- override /model/time_sampler: mixed
+run:
+  name: mixed_time

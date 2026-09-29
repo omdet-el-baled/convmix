@@ -1,0 +1,11 @@
+_target_: src.metric_suite.OrderedSourceMetrics
+_recursive_: false
+si_sdr_fn:
+  _target_: src.metrics.si_sdr
+  _partial_: true
+nmse_fn:
+  _target_: src.metrics.nmse
+  _partial_: true
+nmae_fn:
+  _target_: src.metrics.nmae
+  _partial_: true

@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+- override /model/score_model: unet_basic
+run:
+  name: basic_network

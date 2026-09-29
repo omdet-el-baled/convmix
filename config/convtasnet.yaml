@@ -1,0 +1,44 @@
+# Independent supervised entry point; existing diffusion configs are untouched.
+defaults:
+  - data: mechanical_k2
+  - datamodule: npz
+  - separator: convtasnet
+  - trainer: convtasnet
+  - callbacks: convtasnet
+  - logger: tensorboard
+  - metrics: default
+  - _self_
+  - baseline_experiment: null
+
+seed: 42
+data:
+  batch_size: 16
+  num_workers: 4
+  persistent_workers: true
+  drop_last: false
+run:
+  name: convtasnet_wiener_seed${seed}
+  output_dir: runs
+  resume: null
+  trust_checkpoint: false
+checkpoint: null
+device: auto
+out: null
+force: false
+evaluation:
+  split: test
+  batch_size: 16
+  max_examples: null
+  save_estimates: true
+  output_dir: results/convtasnet
+  trust_checkpoint: false
+actions:
+  evaluate_after_training: false
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: hydra_logs/${run.name}/${now:%Y-%m-%d_%H-%M-%S}_${now:%f}
+  sweep:
+    dir: hydra_logs/convtasnet_multirun/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.num}

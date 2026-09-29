@@ -1,0 +1,10 @@
+# @package _global_
+run:
+  name: time_sampling_sweep
+actions:
+  evaluate_after_training: true
+hydra:
+  sweeper:
+    params:
+      model/time_sampler: uniform,log_uniform,mixed
+      seed: 0,1,2

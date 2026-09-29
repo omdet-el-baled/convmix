@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+- override /model/score_model/time_embedding: gaussian
+run:
+  name: gaussian_time

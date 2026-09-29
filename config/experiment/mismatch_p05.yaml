@@ -1,0 +1,6 @@
+# @package _global_
+run:
+  name: mismatch_p05
+model:
+  mismatch_probability: 0.5
+  mismatch_input: terminal

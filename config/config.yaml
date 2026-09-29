@@ -1,0 +1,57 @@
+defaults:
+- data: mechanical_k2
+- datamodule: npz
+- model: default
+- trainer: default
+- callbacks: default
+- logger: tensorboard
+- generation: default
+- metrics: default
+- _self_
+- experiment: null
+seed: 42
+run:
+  name: mechanical_k2
+  output_dir: runs
+  tensorboard: true
+  resume: null
+  trust_checkpoint: false
+evaluation:
+  split: test
+  batch_size: 4
+  max_examples: null
+  save_estimates: true
+  output_dir: results
+  failure_threshold: 5.0
+  trust_checkpoint: false
+checkpoint: null
+index: 0
+force: false
+out: null
+device: auto
+actions:
+  evaluate_after_training: false
+diagnostics:
+  task: score
+  bins: [8, 16, 32]
+  covariance_steps: 1000
+  num_times: 101
+  time_max: 5.0
+  times:
+  - 0.005
+  - 0.01
+  - 0.02
+  - 0.05
+  - 0.1
+  - 0.2
+  - 0.5
+  - 1.0
+  max_examples: 64
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: hydra_logs/${run.name}/${now:%Y-%m-%d_%H-%M-%S}_${now:%f}
+  sweep:
+    dir: hydra_logs/multirun/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.num}

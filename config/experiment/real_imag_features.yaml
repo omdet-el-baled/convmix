@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+- override /model/score_model/features: real_imag
+run:
+  name: real_imag_features

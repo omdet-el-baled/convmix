@@ -1,0 +1,10 @@
+# @package _global_
+run:
+  name: architecture_sweep
+actions:
+  evaluate_after_training: true
+hydra:
+  sweeper:
+    params:
+      model/score_model: unet_basic,unet_enhanced,unet_deep
+      seed: 0,1,2

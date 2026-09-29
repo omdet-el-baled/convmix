@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+- override /model/time_sampler: log_uniform
+run:
+  name: log_uniform

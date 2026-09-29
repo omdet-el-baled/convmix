@@ -1,0 +1,7 @@
+# @package _global_
+run:
+  name: a1_b3
+model:
+  sde:
+    alpha: 1.0
+    beta: 3.0

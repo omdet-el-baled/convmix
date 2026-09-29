@@ -1,0 +1,6 @@
+# @package _global_
+run:
+  name: no_mismatch
+model:
+  mismatch_probability: 0.0
+  mismatch_input: terminal

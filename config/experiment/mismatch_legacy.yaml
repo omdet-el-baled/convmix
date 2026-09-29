@@ -1,0 +1,6 @@
+# @package _global_
+run:
+  name: mismatch_legacy
+model:
+  mismatch_probability: 0.05
+  mismatch_input: forward_legacy

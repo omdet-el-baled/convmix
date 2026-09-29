@@ -1,0 +1,9 @@
+_target_: src.data.components.DatasetGenerator
+_recursive_: false
+filters:
+  _target_: src.data.filters.generate_filter_bank
+sources:
+  _target_: src.data.components.SourceBank
+measurement_noise:
+  _target_: src.data.generate.add_noise_at_snr
+  _partial_: true

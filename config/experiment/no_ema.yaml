@@ -1,0 +1,7 @@
+# @package _global_
+run:
+  name: no_ema
+model:
+  ema_decay: null
+  sampler:
+    weights: online

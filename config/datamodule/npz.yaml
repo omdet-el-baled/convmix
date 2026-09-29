@@ -1,0 +1,19 @@
+_target_: src.dataset.MixData_Module
+_recursive_: false
+data_dir: ${data.data_dir}
+batch_size: ${data.batch_size}
+num_workers: ${data.num_workers}
+fft_norm: ${data.fft_norm}
+pin_memory: ${data.pin_memory}
+persistent_workers: ${data.persistent_workers}
+seed: ${seed}
+drop_last: ${data.drop_last}
+train_subset: ${data.train_subset}
+dataset:
+  _target_: src.dataset.MixDataset
+loader:
+  _target_: torch.utils.data.DataLoader
+  _recursive_: true
+train_loader: null
+val_loader: null
+test_loader: null

@@ -1,0 +1,10 @@
+# @package _global_
+run:
+  name: attention_sweep
+actions:
+  evaluate_after_training: true
+hydra:
+  sweeper:
+    params:
+      model/score_model/attention: self_attention,none
+      seed: 0,1,2

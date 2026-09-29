@@ -1,0 +1,11 @@
+# @package _global_
+run:
+  name: alpha_beta_sweep
+actions:
+  evaluate_after_training: true
+hydra:
+  sweeper:
+    params:
+      model.sde.alpha: 1.0,3.0,4.0
+      model.sde.beta: 1.0,3.0
+      seed: 0,1,2

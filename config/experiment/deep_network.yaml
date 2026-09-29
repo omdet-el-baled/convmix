@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+- override /model/score_model: unet_deep
+run:
+  name: deep_network

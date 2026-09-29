@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+- override /data: music_k2
+run:
+  name: music_k2

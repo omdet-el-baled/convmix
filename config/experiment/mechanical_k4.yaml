@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+- override /data: mechanical_k4
+run:
+  name: mechanical_k4

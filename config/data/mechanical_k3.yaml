@@ -1,0 +1,27 @@
+data_dir: data/mechanical_k3_npz
+filters: null
+kind: mechanical
+num_sources: 3
+sample_rate: 2000
+duration: 1.0
+train: 3400
+val: 200
+test: 400
+seed: 42
+filter_length: 13
+filter_model: exponential
+train_snr:
+- 1.0
+- 4.0
+eval_snr:
+- 1.0
+- 2.0
+fft_norm: ortho
+cache_fft: true
+compressed: true
+batch_size: 4
+num_workers: 0
+pin_memory: true
+persistent_workers: false
+drop_last: false
+train_subset: null

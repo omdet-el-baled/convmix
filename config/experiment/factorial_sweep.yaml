@@ -1,0 +1,11 @@
+# @package _global_
+run:
+  name: factorial_sweep
+actions:
+  evaluate_after_training: true
+hydra:
+  sweeper:
+    params:
+      model/sde: convmix,none
+      model.mismatch_probability: 0.0,0.05
+      seed: 0,1,2
