@@ -1,0 +1,19 @@
+mode: evaluate
+output_dir: sweeps/pc_snr
+evaluation_cases:
+- sampling.solver: pc
+  sampling.num_steps: 25
+  sampling.corrector_steps: 1
+  sampling.corrector_snr: 0.05
+- sampling.solver: pc
+  sampling.num_steps: 25
+  sampling.corrector_steps: 1
+  sampling.corrector_snr: 0.1
+- sampling.solver: pc
+  sampling.num_steps: 25
+  sampling.corrector_steps: 1
+  sampling.corrector_snr: 0.16
+- sampling.solver: pc
+  sampling.num_steps: 25
+  sampling.corrector_steps: 1
+  sampling.corrector_snr: 0.25

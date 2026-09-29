@@ -1,0 +1,6 @@
+extends: ../base.yaml
+run:
+  name: mechanical_k3
+data:
+  data_dir: data/mechanical_k3_npz
+  num_sources: 3

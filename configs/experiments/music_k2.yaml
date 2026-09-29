@@ -1,0 +1,7 @@
+extends: ../base.yaml
+run:
+  name: music_k2
+data:
+  data_dir: data/music_k2_npz
+  kind: music
+  num_sources: 2

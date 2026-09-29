@@ -1,0 +1,7 @@
+extends: ../base.yaml
+run:
+  name: no_ema
+model:
+  ema_decay: null
+sampling:
+  weights: online

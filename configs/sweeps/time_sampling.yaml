@@ -1,0 +1,16 @@
+mode: train
+base_config: ../base.yaml
+output_dir: sweeps/time_sampling
+seeds:
+- 42
+grid:
+  model.time_sampling_strategy:
+  - uniform
+  - log_uniform
+  - mixed
+evaluation_cases:
+- sampling.num_steps: 5
+- sampling.num_steps: 10
+- sampling.num_steps: 20
+- sampling.num_steps: 50
+- sampling.num_steps: 100

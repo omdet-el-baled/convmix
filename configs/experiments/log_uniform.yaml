@@ -1,0 +1,5 @@
+extends: ../base.yaml
+run:
+  name: log_uniform
+model:
+  time_sampling_strategy: log_uniform

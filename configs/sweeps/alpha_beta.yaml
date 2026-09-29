@@ -1,0 +1,27 @@
+mode: train
+base_config: ../base.yaml
+output_dir: sweeps/alpha_beta
+seeds:
+- 42
+cases:
+- sde.alpha: 1.0
+  sde.beta: 1.0
+- sde.alpha: 1.0
+  sde.beta: 3.0
+- sde.alpha: 3.0
+  sde.beta: 1.0
+- sde.alpha: 3.0
+  sde.beta: 3.0
+- sde.alpha: 4.0
+  sde.beta: 3.0
+evaluation_cases:
+- sampling.solver: euler
+  sampling.num_steps: 5
+- sampling.solver: euler
+  sampling.num_steps: 10
+- sampling.solver: euler
+  sampling.num_steps: 20
+- sampling.solver: euler
+  sampling.num_steps: 50
+- sampling.solver: euler
+  sampling.num_steps: 100

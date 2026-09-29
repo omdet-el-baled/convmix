@@ -1,0 +1,5 @@
+extends: ../base.yaml
+run:
+  name: instantaneous_drift
+sde:
+  drift_mode: instantaneous

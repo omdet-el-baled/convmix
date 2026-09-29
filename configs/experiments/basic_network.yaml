@@ -1,0 +1,5 @@
+extends: ../base.yaml
+run:
+  name: basic_network
+network:
+  architecture: basic

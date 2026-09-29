@@ -1,0 +1,6 @@
+extends: ../base.yaml
+run:
+  name: alpha4_beta3
+sde:
+  alpha: 4.0
+  beta: 3.0

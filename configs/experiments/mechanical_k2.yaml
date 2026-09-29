@@ -1,0 +1,3 @@
+extends: ../base.yaml
+run:
+  name: mechanical_k2

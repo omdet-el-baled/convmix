@@ -1,0 +1,6 @@
+extends: ../base.yaml
+run:
+  name: mismatch_p005
+model:
+  mismatch_probability: 0.05
+  mismatch_input: terminal

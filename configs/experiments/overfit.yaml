@@ -1,0 +1,9 @@
+extends: ../base.yaml
+run:
+  name: overfit_32
+data:
+  train_subset: 32
+  batch_size: 4
+trainer:
+  max_epochs: 20
+  early_stopping_patience: 0

@@ -1,0 +1,12 @@
+mode: evaluate
+output_dir: sweeps/samplers_equal_nfe
+evaluation_cases:
+- sampling.solver: euler
+  sampling.num_steps: 50
+- sampling.solver: heun
+  sampling.num_steps: 25
+- sampling.solver: em
+  sampling.num_steps: 50
+- sampling.solver: pc
+  sampling.num_steps: 25
+  sampling.corrector_steps: 1

@@ -1,0 +1,17 @@
+mode: evaluate
+output_dir: sweeps/sampler_nfe
+evaluation_cases:
+- sampling.solver: euler
+  sampling.num_steps: 5
+- sampling.solver: euler
+  sampling.num_steps: 10
+- sampling.solver: euler
+  sampling.num_steps: 20
+- sampling.solver: euler
+  sampling.num_steps: 50
+- sampling.solver: euler
+  sampling.num_steps: 100
+- sampling.solver: euler
+  sampling.num_steps: 200
+- sampling.solver: euler
+  sampling.num_steps: 500

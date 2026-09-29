@@ -1,0 +1,5 @@
+extends: mismatch_p005.yaml
+run:
+  name: mismatch_legacy_p005
+model:
+  mismatch_input: forward_legacy

@@ -1,0 +1,18 @@
+mode: train
+base_config: ../base.yaml
+output_dir: sweeps/source_count
+seeds:
+- 42
+cases:
+- data.num_sources: 2
+  data.data_dir: data/mechanical_k2_npz
+- data.num_sources: 3
+  data.data_dir: data/mechanical_k3_npz
+- data.num_sources: 4
+  data.data_dir: data/mechanical_k4_npz
+- data.num_sources: 5
+  data.data_dir: data/mechanical_k5_npz
+- data.num_sources: 6
+  data.data_dir: data/mechanical_k6_npz
+evaluation_cases:
+- sampling.num_steps: 50

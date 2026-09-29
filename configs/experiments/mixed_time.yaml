@@ -1,0 +1,5 @@
+extends: ../base.yaml
+run:
+  name: mixed_time
+model:
+  time_sampling_strategy: mixed

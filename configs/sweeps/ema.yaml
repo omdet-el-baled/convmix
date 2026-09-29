@@ -1,0 +1,11 @@
+mode: train
+base_config: ../base.yaml
+output_dir: sweeps/ema
+seeds:
+- 42
+grid: {}
+evaluation_cases:
+- sampling.weights: online
+  sampling.num_steps: 50
+- sampling.weights: ema
+  sampling.num_steps: 50

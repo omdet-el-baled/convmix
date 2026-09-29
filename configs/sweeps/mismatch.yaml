@@ -1,0 +1,16 @@
+mode: train
+base_config: ../base.yaml
+output_dir: sweeps/mismatch
+seeds:
+- 0
+- 1
+- 2
+checkpoint_policy: last
+grid:
+  model.mismatch_probability:
+  - 0.0
+  - 0.05
+  - 0.5
+evaluation_cases:
+- sampling.solver: euler
+  sampling.num_steps: 50

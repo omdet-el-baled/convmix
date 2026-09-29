@@ -1,0 +1,17 @@
+mode: train
+base_config: ../base.yaml
+output_dir: sweeps/factorial
+seeds:
+- 0
+- 1
+- 2
+grid:
+  sde.drift_mode:
+  - mixing
+  - none
+  model.mismatch_probability:
+  - 0.0
+  - 0.05
+evaluation_cases:
+- sampling.solver: euler
+  sampling.num_steps: 50
