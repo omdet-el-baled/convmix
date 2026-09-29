@@ -1,0 +1,34 @@
+...............................................................          [100%]
+=============================== warnings summary ===============================
+tests/test_convtasnet_baseline.py::test_lightning_npz_training_and_checkpoint_state
+tests/test_sweeps.py::test_short_sweep_reuses_only_matching_finished_runs
+tests/test_workflow.py::test_short_lightning_train_checkpoint_evaluate_resume
+  /opt/pyvenv/lib/python3.13/site-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+
+tests/test_convtasnet_baseline.py::test_lightning_npz_training_and_checkpoint_state
+tests/test_sweeps.py::test_short_sweep_reuses_only_matching_finished_runs
+tests/test_workflow.py::test_short_lightning_train_checkpoint_evaluate_resume
+  /opt/pyvenv/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:434: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=4` in the `DataLoader` to improve performance.
+
+tests/test_convtasnet_baseline.py::test_lightning_npz_training_and_checkpoint_state
+tests/test_sweeps.py::test_short_sweep_reuses_only_matching_finished_runs
+tests/test_workflow.py::test_short_lightning_train_checkpoint_evaluate_resume
+  /opt/pyvenv/lib/python3.13/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:434: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=4` in the `DataLoader` to improve performance.
+
+tests/test_data_model.py::test_data_convolution_cache_snr_and_worker_loading
+tests/test_data_model.py::test_data_convolution_cache_snr_and_worker_loading
+  /usr/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=1363) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+tests/test_sweeps.py::test_short_sweep_reuses_only_matching_finished_runs
+tests/test_workflow.py::test_short_lightning_train_checkpoint_evaluate_resume
+  /opt/pyvenv/lib/python3.13/site-packages/pytorch_lightning/loops/fit_loop.py:538: Found 204 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+
+tests/test_workflow.py::test_short_lightning_train_checkpoint_evaluate_resume
+  /opt/pyvenv/lib/python3.13/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /tmp/pytest-of-root/pytest-5/test_short_lightning_train_che0/runs/tiny/checkpoints exists and is not empty.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_convtasnet_hydra.py:12: could not import 'hydra': No module named 'hydra'
+SKIPPED [1] tests/test_hydra_workflow.py:12: Install requirements.txt to run native Hydra integration tests
+63 passed, 2 skipped, 14 warnings in 11.81s

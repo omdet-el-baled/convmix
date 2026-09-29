@@ -1,0 +1,22 @@
+{
+  "src/sde/freqsde.py": {
+    "identical_to_previous_zip": true,
+    "sha256": "db24fbdcc61b2c7df74e4edb065f4878ae1bf9f1169f8b96d1bda5a1fc777db5"
+  },
+  "src/sde/rfft_noise.py": {
+    "identical_to_previous_zip": true,
+    "sha256": "354295b5f63a7b1404c8b1ddd7d97a768456dcb1a7416e2c1c6bceb850f04867"
+  },
+  "src/sampling/samplers.py": {
+    "identical_to_previous_zip": true,
+    "sha256": "f3fb9443a95405ffe8275c035672088c42b6c0ca56ec98a0996fd8d0f4fb3ca0"
+  },
+  "src/metrics.py": {
+    "identical_to_previous_zip": true,
+    "sha256": "2d40ccfecf0f437d71662a54e1b73c63fcd509968dd33b2176cacc0becd72bc0"
+  },
+  "src/data/filters.py": {
+    "identical_to_previous_zip": true,
+    "sha256": "0377b4d606a2f3663130d92fd2730d14a2f31e67c50259748d172d99c28e2f02"
+  }
+}

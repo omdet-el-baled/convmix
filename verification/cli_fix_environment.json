@@ -1,0 +1,9 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "torch": "2.10.0+cpu",
+  "pytorch-lightning": "2.6.5",
+  "omegaconf": "2.3.0",
+  "hydra-core": "not installed",
+  "pytest": "9.0.2"
+}
