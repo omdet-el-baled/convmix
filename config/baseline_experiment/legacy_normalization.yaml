@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - override /separator/normalization: batch_peak
+  - _self_
+separator:
+  restore_scale: false
+run:
+  name: convtasnet_legacy_normalization_seed${seed}

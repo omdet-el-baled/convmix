@@ -1,0 +1,2 @@
+_target_: src.time_sampling.LogUniformTimeSampler
+name: log_uniform

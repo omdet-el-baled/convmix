@@ -1,0 +1,11 @@
+defaults:
+  - network: convtasnet
+  - postprocess: wiener
+  - normalization: peak
+  - loss: negative_si_sdr
+  - optimizer: adam
+  - scheduler: none
+  - _self_
+_target_: src.baselines.convtasnet.ConvTasNetModule
+_recursive_: false
+restore_scale: true

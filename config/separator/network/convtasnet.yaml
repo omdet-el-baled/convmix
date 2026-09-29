@@ -1,0 +1,16 @@
+_target_: src.baselines.convtasnet.make_convtasnet
+# n_src and sample_rate are injected from NPZ metadata, not guessed here.
+n_blocks: 8
+n_repeats: 3
+bn_chan: 128
+hid_chan: 512
+skip_chan: 128
+conv_kernel_size: 3
+norm_type: gLN
+mask_act: sigmoid
+causal: false
+fb_name: free
+kernel_size: 16
+n_filters: 512
+stride: 8
+encoder_activation: null

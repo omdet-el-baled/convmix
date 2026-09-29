@@ -1,0 +1,4 @@
+_target_: src.losses.CovarianceWeightedDSM
+_recursive_: false
+reduction:
+  _target_: src.losses.ComplexSquaredResidual

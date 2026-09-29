@@ -1,0 +1,3 @@
+_target_: src.models.examples.TinyScoreNet
+channels: 16
+time_dim: 32

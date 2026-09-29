@@ -1,0 +1,4 @@
+_target_: torch.optim.SGD
+lr: ${model.learning_rate}
+weight_decay: ${model.weight_decay}
+momentum: 0.9

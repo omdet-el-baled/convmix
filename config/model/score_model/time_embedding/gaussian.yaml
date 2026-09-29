@@ -1,0 +1,3 @@
+_target_: src.models.embeddings.GaussianFourierProjection
+scale: 16.0
+seed: 0

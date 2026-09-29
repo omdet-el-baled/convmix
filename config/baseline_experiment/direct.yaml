@@ -1,0 +1,6 @@
+# @package _global_
+defaults:
+  - override /separator/postprocess: none
+  - _self_
+run:
+  name: convtasnet_direct_seed${seed}

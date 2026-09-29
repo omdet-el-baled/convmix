@@ -1,0 +1,2 @@
+_target_: src.baselines.convtasnet.NegativeSISDR
+zero_mean: false  # matches the TorchMetrics default in the supplied script

@@ -1,0 +1,14 @@
+_target_: src.models.blocks.FiLMResidualBlock
+_recursive_: false
+groups: 8
+normalization:
+  _target_: src.models.normalization.adaptive_group_norm
+activation:
+  _target_: torch.nn.SiLU
+convolution:
+  _target_: torch.nn.Conv1d
+time_projection:
+  _target_: torch.nn.Linear
+kernel_size: 3
+skip:
+  _target_: torch.nn.Conv1d

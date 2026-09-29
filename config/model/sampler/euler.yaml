@@ -1,0 +1,14 @@
+defaults:
+- predictor: euler
+- corrector: none
+- grid: linear
+- initialization: repeated_observation
+- noise: paired
+- _self_
+_target_: src.sampling.pipeline.PredictorCorrectorSampler
+_recursive_: false
+solver: euler
+num_steps: 50
+add_terminal_noise: true
+weights: ema
+seed: 11001

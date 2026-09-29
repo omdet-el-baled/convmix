@@ -1,0 +1,12 @@
+enabled: true
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  mode: min
+  factor: 0.5
+  patience: 2
+  min_lr: 1.0e-6
+monitor: val/loss
+interval: epoch
+# Step only when there is a fresh validation result.
+frequency: ${trainer.check_val_every_n_epoch}
+strict: true

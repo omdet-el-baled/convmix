@@ -1,0 +1,10 @@
+enabled: true
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  mode: min
+  factor: 0.5
+  patience: 10
+interval: epoch
+frequency: 1
+monitor: val/score_loss
+strict: true

@@ -1,0 +1,51 @@
+defaults:
+- time_embedding: sinusoidal
+- block: film
+- attention: self_attention
+- downsample: conv
+- upsample: nearest_conv
+- features: spectral_log
+- _self_
+_target_: src.models.unet.ScoreUNet
+_recursive_: false
+base_channels: 64
+time_dim: 256
+num_heads: 4
+dropout: 0.05
+channel_multipliers:
+- 1
+- 2
+- 4
+encoder_dilations:
+- - 1
+  - 2
+- - 1
+  - 2
+- - 1
+  - 4
+decoder_dilations:
+- - 1
+  - 1
+- - 1
+  - 2
+- - 1
+  - 2
+bottleneck_dilations:
+- 1
+- 2
+- 4
+attention_after: 2
+input_projection:
+  _target_: torch.nn.Conv1d
+  kernel_size: 5
+  padding: 2
+output_projection:
+  _target_: torch.nn.Conv1d
+  kernel_size: 3
+  padding: 1
+output_norm:
+  _target_: src.models.normalization.adaptive_group_norm
+  groups: 8
+output_activation:
+  _target_: torch.nn.SiLU
+output_init_std: 0.001

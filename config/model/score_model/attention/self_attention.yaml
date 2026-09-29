@@ -1,0 +1,9 @@
+_target_: src.models.attention.SelfAttention1D
+groups: 8
+_recursive_: false
+normalization:
+  _target_: src.models.normalization.adaptive_group_norm
+attention:
+  _target_: torch.nn.MultiheadAttention
+output_projection:
+  _target_: torch.nn.Linear

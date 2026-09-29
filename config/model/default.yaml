@@ -1,0 +1,31 @@
+defaults:
+- score_model: unet_enhanced
+- sde: convmix
+- optimizer: adamw
+- scheduler: none
+- loss: dsm_mismatch
+- time_sampler: uniform
+- sampler: euler
+- _self_
+_target_: src.pl_model.DCSModel
+_recursive_: false
+learning_rate: 0.0001
+weight_decay: 0.0001
+t_eps: 0.005
+time_sampling_strategy: ${model.time_sampler.name}
+time_sampling_log_fraction: 0.5
+ema_decay: 0.999
+mismatch_probability: 0.0
+mismatch_input: terminal
+mismatch_selection: batch
+validation_seed: 11001
+validation_time_sampler:
+  _target_: src.time_sampling.UniformTimeSampler
+  name: uniform
+noise_sampler:
+  _target_: src.sde.rfft_noise.standard_rfft_noise_like
+  _partial_: true
+ema_update:
+  _target_: src.ema.ExponentialMovingAverage
+loss_selection:
+  _target_: src.losses.BernoulliSelection

@@ -1,0 +1,6 @@
+_target_: src.sampling.correctors.LangevinCorrector
+num_steps: 1
+snr: 0.16
+geometry: diffusion
+step_size: null
+max_step: 1.0

@@ -1,0 +1,12 @@
+# The real Asteroid network with reduced widths/depth, for smoke tests only.
+_target_: src.baselines.convtasnet.make_convtasnet
+n_blocks: 2
+n_repeats: 1
+bn_chan: 8
+hid_chan: 16
+skip_chan: 8
+n_filters: 16
+kernel_size: 8
+stride: 4
+norm_type: gLN
+mask_act: sigmoid

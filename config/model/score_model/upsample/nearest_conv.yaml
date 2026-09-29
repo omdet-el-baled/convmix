@@ -1,0 +1,7 @@
+_target_: src.models.resampling.Upsample
+_recursive_: false
+kernel_size: 3
+padding: 1
+mode: nearest
+convolution:
+  _target_: torch.nn.Conv1d

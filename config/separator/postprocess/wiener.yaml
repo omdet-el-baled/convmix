@@ -1,0 +1,2 @@
+_target_: src.baselines.convtasnet.WienerDeconvolution
+snr: 0.01  # additive inverse-SNR regularizer; not the dataset SNR in dB

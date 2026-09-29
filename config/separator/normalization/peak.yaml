@@ -1,0 +1,3 @@
+_target_: src.baselines.convtasnet.PeakNormalizer
+mode: example
+eps: 1.0e-8
